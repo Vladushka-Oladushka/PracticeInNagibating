@@ -4,6 +4,7 @@ x1=2;
 xres=(x0+x1)/2;
 eps=0.01;
 disp(xres);
+delta = x1-x0;
 while delta > eps
     y0=x0+(x1-x0)/4;
     y1=x1-(x1-x0)/4;
@@ -17,9 +18,8 @@ while delta > eps
         x0=y0;
         x1=y1;
     end
-    delta=abs(x0-x1);
+    delta=x1-x0;
 end
-
 
 end
 
