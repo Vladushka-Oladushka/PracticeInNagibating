@@ -1,6 +1,6 @@
 function dichotomy
-x0=0;
-x1=2;
+x0=0.;
+x1=2.;
 xres=(x0+x1)/2;
 eps=0.01;
 disp(xres);
@@ -11,7 +11,7 @@ while delta > eps
     if f(y0)<f(xres)
         x1=xres;
         xres=y0;
-    elseif f(y1)<f(x)
+    elseif f(y1)<f(xres)
         x0=xres;
         xres=y1;
     else
@@ -21,6 +21,7 @@ while delta > eps
     delta=x1-x0;
 end
 
+disp(f(xres));
 end
 
 function y1=f(x)
