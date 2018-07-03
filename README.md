@@ -1,2 +1,2 @@
-# PractoceInNagibating
+# SummerPractoce
 Summer Practice
