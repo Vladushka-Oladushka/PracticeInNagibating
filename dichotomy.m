@@ -3,8 +3,10 @@ x0=0.;
 x1=2.;
 xres=(x0+x1)/2;
 eps=0.01;
-disp(xres);
+
+dots=[];
 delta = x1-x0;
+k=1;
 while delta > eps
     y0=x0+(x1-x0)/4;
     y1=x1-(x1-x0)/4;
@@ -18,10 +20,15 @@ while delta > eps
         x0=y0;
         x1=y1;
     end
+    dots(k)=xres;
+    fun(k)=xres*sin(xres*xres)+1;
+    
+    k=k+1;
     delta=x1-x0;
 end
-
 disp(f(xres));
+
+plot(dots,fun);
 end
 
 function y1=f(x)
