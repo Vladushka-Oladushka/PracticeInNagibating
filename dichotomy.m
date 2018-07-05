@@ -22,13 +22,16 @@ while delta > eps
     end
     dots(k)=xres;
     fun(k)=xres*sin(xres*xres)+1;
-    
     k=k+1;
     delta=x1-x0;
 end
 disp(f(xres));
-
+for i=1:k-1
+  zero(i)=f(xres);
+end
+hold on;
 plot(dots,fun);
+plot(dots,zero,'o');
 end
 
 function y1=f(x)
